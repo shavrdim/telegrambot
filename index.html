@@ -125,7 +125,7 @@ body {
     <h2 class="dialog-title"> Диалог персонажей <span class="question-mark">❓</span></h2>
     <div class="character">
         <select class="character-select">
-            <option value="1">Arthas 🗡</option>
+            <option value="1">Arthas 🗡, id = "Arthas1"</option>
             <option value="2">Silverhand 🤟</option>
             <option value="3">Puge </option>
             <option value="4">Stalker bandit</option>
@@ -146,29 +146,7 @@ body {
 
     <div class="character">
         <select class="character-select">
-            <option value="1">Arthas 🗡</option>
-            <option value="2">Silverhand 🤟</option>
-            <option value="3">Puge </option>
-            <option value="4">Stalker bandit</option>
-            <option value="5">Geralt 🐺</option>
-            <option value="6">Winnie 🧸</option>
-            <option value="7">Bob 🧽</option>
-            <option value="8">Hraz 🤖</option>
-            <option value="9">sidorovich 💲</option>
-            <option value="10">Shrek</option>
-            <option value="11">Azir 👑</option>
-            <option value="12">Dr.Leavsy 🏝</option>
-            <option value="13">ErenYager</option>
-            <option value="13">Ghost</option>
-            <option value="13">Morti-Smit</option>
-        </select>
-        <input type="text" class="user-input" placeholder="Введите текст реплики">
-
-    </div>
-
-    <div class="character">
-        <select class="character-select">
-            <option value="1">Arthas 🗡</option>
+            <option value="1">Arthas 🗡, id = "Arthas1"</option>
             <option value="2">Silverhand 🤟</option>
             <option value="3">Puge </option>
             <option value="4">Stalker bandit</option>
@@ -190,7 +168,29 @@ body {
 
     <div class="character">
         <select class="character-select">
-            <option value="1">Arthas 🗡</option>
+            <option value="1">Arthas 🗡, id = "Arthas1"</option>
+            <option value="2">Silverhand 🤟</option>
+            <option value="3">Puge </option>
+            <option value="4">Stalker bandit</option>
+            <option value="5">Geralt 🐺</option>
+            <option value="6">Winnie 🧸</option>
+            <option value="7">Bob 🧽</option>
+            <option value="8">Hraz 🤖</option>
+            <option value="9">sidorovich 💲</option>
+            <option value="10">Shrek</option>
+            <option value="11">Azir 👑</option>
+            <option value="12">Dr.Leavsy 🏝</option>
+            <option value="13">ErenYager</option>
+            <option value="13">Ghost</option>
+            <option value="13">Morti-Smit</option>
+        </select>
+        <input type="text" class="user-input" placeholder="Введите текст реплики">
+
+    </div>
+
+    <div class="character">
+        <select class="character-select">
+            <option value="1">Arthas 🗡, id = "Arthas1"</option>
             <option value="2">Silverhand 🤟</option>
             <option value="3">Puge </option>
             <option value="4">Stalker bandit</option>
@@ -218,21 +218,33 @@ body {
 
     </div>
 
-    <button class="btn-voice">Озвучить</button>
+    <button class="btn-voice">Озвучить,id = "voice"</button>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
     <script>
     const questionMark = document.querySelector('.question-mark');
     const helpPopup = document.querySelector('.help-popup');
     const closeButton = document.querySelector('.close-button');
+    let tg=window.Telegram.WebApp;
+    let arthas=document.getElementById("Arthas1");
+    let button_voice=document.getElementById("voice");
+
+    button_voice.addEventListener('click', () => {
+        tg.close;
+
+    });
 
     questionMark.addEventListener('click', () => {
         helpPopup.style.display = 'block';
+
     });
 
     closeButton.addEventListener('click', () => {
         helpPopup.style.display = 'none';
     });
 </script>
+
 </div>
 
 </body>
