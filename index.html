@@ -224,16 +224,16 @@ body {
     <script>
         let tg = window.Telegram.WebApp;
 
-
+        // Получаем ссылку на кнопку "Озвучить"
         let button_voice = document.getElementById("voice");
 
-
+        // Обработчик клика по кнопке
         button_voice.addEventListener('click', () => {
-
+            // Закрываем web app
             tg.close();
         });
 
-    });
+        // ... ваш JavaScript-код ...
     </script>
 
     <script>
