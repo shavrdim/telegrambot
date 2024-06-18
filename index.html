@@ -233,17 +233,25 @@ body {
         button_voice.addEventListener('click', () => {
             let input1 = document.getElementById("input1").value;
             let input2 = document.getElementById("input2").value;
+            let input3 = document.getElementById("input3").value;
+            let input4 = document.getElementById("input4").value;
 
             // Получаем выбранных персонажей
             let character1 = document.getElementById("character1").value;
             let character2 = document.getElementById("character2").value;
+            let character3 = document.getElementById("character3").value;
+            let character3 = document.getElementById("character4").value;
 
             // Формируем JSON-объект для отправки в бота
             let data = {
                 "character1": character1,
                 "character2": character2,
+                "character3": character3,
+                "character4": character4,
                 "text1": input1,
-                "text2": input2
+                "text2": input2,
+                "text3": input3,
+                "text4": input4
             };
 
             // Отправляем данные в бота (замените на ваш бот)
