@@ -124,7 +124,7 @@ body {
 <div class="container">
     <h2 class="dialog-title"> Диалог персонажей <span class="question-mark">❓</span></h2>
     <div class="character">
-        <select class="character-select">
+        <select class="character-select" id="character1">
             <option id="1">Arthas 🗡</option>
             <option id="2">Silverhand 🤟</option>
             <option id="3">Puge </option>
@@ -145,7 +145,7 @@ body {
     </div>
 
     <div class="character">
-        <select class="character-select">
+        <select class="character-select" id="character2">
             <option id="16">Arthas 🗡</option>
             <option id="17">Silverhand 🤟</option>
             <option id="18">Puge </option>
@@ -167,8 +167,8 @@ body {
     </div>
 
     <div class="character">
-        <select class="character-select">
-            <option id="31">Arthas 🗡</option>
+        <select class="character-select" id="character3">
+            <option id="31">Arthas 🗡"</option>
             <option id="32">Silverhand 🤟</option>
             <option id="33">Puge </option>
             <option id="34">Stalker bandit</option>
@@ -189,7 +189,7 @@ body {
     </div>
 
     <div class="character">
-        <select class="character-select">
+        <select class="character-select" id="character4">
             <option id="46">Arthas 🗡</option>
             <option id="47">Silverhand 🤟</option>
             <option id="48">Puge </option>
@@ -230,11 +230,36 @@ body {
 
         // Обработчик клика по кнопке
         button_voice.addEventListener('click', () => {
+            // Получаем текст реплики
+            let input1 = document.getElementById("input1").value;
+            let input2 = document.getElementById("input2").value;
+            let input3 = document.getElementById("input3").value;
+            let input4 = document.getElementById("input4").value;
+
+            // Получаем выбранных персонажей
+            let character1 = document.getElementById("character1").value;
+            let character2 = document.getElementById("character2").value;
+            let character3 = document.getElementById("character3").value;
+            let character4 = document.getElementById("character4").value;
+
+            // Формируем JSON-объект для отправки в бота
+            let data = {
+                "character1": character1,
+                "character2": character2,
+                "character3": character3,
+                "character4": character4,
+                "text1": input1,
+                "text2": input2,
+                "text3": input3,
+                "text4": input4
+            };
+
+            // Отправляем данные в бота (замените на ваш бот)
+            tg.sendData(JSON.stringify(data));
+
             // Закрываем web app
             tg.close();
         });
-
-        // ... ваш JavaScript-код ...
     </script>
 
     <script>
