@@ -209,6 +209,7 @@ body {
         </div>
         </select>
         <input type="text" class="user-input" placeholder="Введите текст реплики" id="input4" maxlength="150">
+    <div id="error"></div>
 
     <div class="help-popup">
     <span class="close-button">×</span>
@@ -258,13 +259,13 @@ body {
 
              // Если нет текста, выводим ошибку
             if (!hasText) {
-                window.alert("Пожалуйста, добавьте текст в поле реплики.");
+                document.getElementById("error").innerText = 'Пожалуйста, добавьте более одной реплики персонажа';
                 return;
             }
 
             // Если только один текст, выводим ошибку
             if (!hasMultipleText) {
-                window.alert("Пожалуйста, добавьте более одной реплики персонажа.");
+                document.getElementById("error").innerText = 'Пожалуйста, добавьте более одной реплики персонажа';
                 return;
             }
 
