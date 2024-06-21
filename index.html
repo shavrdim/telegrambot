@@ -238,11 +238,35 @@ body {
             let input3 = document.getElementById("input3").value;
             let input4 = document.getElementById("input4").value;
 
+                        // Проверка, введено ли хотя бы в 2 поля текста
+            let hasText = input1.trim() !== "" || input2.trim() !== "" || input3.trim() !== "" || input4.trim() !== "";
+
+            // Проверка, введено ли хотя бы в 2 поля текста
+            let hasMultipleText = (input1.trim() !== "" && input2.trim() !== "") ||
+                                 (input1.trim() !== "" && input3.trim() !== "") ||
+                                 (input1.trim() !== "" && input4.trim() !== "") ||
+                                 (input2.trim() !== "" && input3.trim() !== "") ||
+                                 (input2.trim() !== "" && input4.trim() !== "") ||
+                                 (input3.trim() !== "" && input4.trim() !== "");
+
             // Получаем выбранных персонажей
             let character1 = document.getElementById("character1").value;
             let character2 = document.getElementById("character2").value;
             let character3 = document.getElementById("character3").value;
             let character4 = document.getElementById("character4").value;
+
+
+             // Если нет текста, выводим ошибку
+            if (!hasText) {
+                window.alert("Пожалуйста, добавьте текст в поле реплики.");
+                return;
+            }
+
+            // Если только один текст, выводим ошибку
+            if (!hasMultipleText) {
+                window.alert("Пожалуйста, добавьте более одной реплики персонажа.");
+                return;
+            }
 
             // Формируем JSON-объект для отправки в бота
             let data = {
